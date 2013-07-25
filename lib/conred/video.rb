@@ -4,8 +4,8 @@ require "net/http"
 module Conred
   module Video
     def initialize(arguments = {:width => 670, :height => 450, :error_message => "Video url you have provided is invalid"})
-      @width = arguments[:width]
-      @height = arguments[:height]
+      #@width = arguments[:width]
+      #@height = arguments[:height]
       @error_message = arguments[:error_message]
       @video_id = get_video_id_from arguments[:video_url]
     end
@@ -21,8 +21,8 @@ module Conred
     def code
       render(
         :video_link => video_link,
-        :height => @height,
-        :width => @width
+        :height => 0,
+        :width => 0
       ).html_safe
     end
 
