@@ -3,7 +3,6 @@ require "action_view"
 require "conred/helpers"
 require "conred/video"
 require "conred/links"
-require "haml"
 module Conred
   def Video.new arguments
     if Video::Youtube.url_format_is_valid? arguments[:video_url]
